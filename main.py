@@ -1,4 +1,5 @@
 from dotenv import load_dotenv
+import asyncio
 
 from livekit import agents
 from livekit.agents import AgentSession, Agent, RoomInputOptions
@@ -15,7 +16,7 @@ from livekit.plugins import (
 from livekit.plugins.turn_detector.multilingual import MultilingualModel
 
 load_dotenv()
-from prompt import prompt, first_message
+from prompt import prompt
 
 class Assistant(Agent):
     def __init__(self) -> None:
@@ -35,8 +36,8 @@ async def entrypoint(ctx: agents.JobContext):
             temperature=0.8,
         ),
         tts=elevenlabs.TTS(
-            voice_id="FVQMzxJGPUBtfz1Azdoy",
-            model="eleven_multilingual_v2",
+            voice_id="WLKp2jV6nrS8aMkPPDRO",
+            model="eleven_multilingual_v2", 
             voice_settings=elevenlabs.tts.VoiceSettings(
                 stability=0.71,
                 similarity_boost=0.5,
@@ -55,10 +56,6 @@ async def entrypoint(ctx: agents.JobContext):
         room_input_options=RoomInputOptions(
             noise_cancellation=noise_cancellation.BVC(),
         ),
-    )
-
-    await session.generate_reply(
-        instructions=first_message
     )
 
 

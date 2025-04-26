@@ -1,1 +1,2 @@
-funny_voice = "ODq5zmih8GrVes37Dizd"
+male_voice = "WLKp2jV6nrS8aMkPPDRO"
+female_voice = "FVQMzxJGPUBtfz1Azdoy"
