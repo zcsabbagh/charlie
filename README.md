@@ -26,12 +26,20 @@ The main application uses:
 ## Setup
 1. Install dependencies:
 ```bash
-pip install -r requirements.txt
+pip install \
+  "livekit-agents[deepgram,google,elevenlabs,groq,openai,cartesia,silero,turn-detector]~=1.0" \
+  "livekit-plugins-noise-cancellation~=0.2" \
+  "python-dotenv"
 ```
 
 2. Set up environment variables in `.env`
 
-3. Run the application:
+3. Download required model files:
+```bash
+python main.py download-files
+```
+
+4. Run the application:
 ```bash
 python main.py
 ```
