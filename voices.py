@@ -1,0 +1,1 @@
+funny_voice = "ODq5zmih8GrVes37Dizd"

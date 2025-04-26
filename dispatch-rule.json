@@ -1,0 +1,14 @@
+{
+  "trunk_ids": ["ST_c36DrVRC2Wj7"],
+  "rule": {
+    "dispatchRuleIndividual": {
+      "roomPrefix": "call-kingsburg-"
+    }
+  },
+  "roomConfig": {
+    "agents": [{
+      "agentName": "inbound-agent",
+      "metadata": "job dispatch metadata"
+    }]
+  }
+} 
